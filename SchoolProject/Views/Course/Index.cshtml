@@ -1,0 +1,25 @@
+﻿    
+@model List<Course>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.CourseName</td>    
+                <td><a href="Course/Delete/@course.CourseId">X</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

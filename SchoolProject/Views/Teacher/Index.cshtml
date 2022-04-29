@@ -1,0 +1,33 @@
+﻿
+@model List<Teacher>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var teacher in Model)
+        {
+            <tr>
+                <td>@teacher.TeacherName</td>
+                <td>@teacher.TeacherAge</td>
+                <td>@teacher.TeacherAddress</td>
+                <td><a href="Teacher/Delete/@teacher.TeacherId">X</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
